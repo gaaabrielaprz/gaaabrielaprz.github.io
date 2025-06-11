@@ -1,0 +1,361 @@
+/* #id .class*/
+
+* {
+    margin: 0;
+    font-family: 'Comic Neue', sans-serif;
+}
+
+@font-face {
+    font-family:'HelloHeadline';
+    src:url(/fonts/Hello_Headline_W00_Regular.ttf) format(truetype)
+}
+body {
+    background-image: url('https://www.bluey.tv/wp-content/uploads/2025/04/Establiush.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.navbar, footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.head, footer{
+    background-color: aliceblue;
+}
+
+.seccion1, .seccion2, .seccion2, .seccion4{
+    padding: 20px 10px;
+    min-height: 200px;
+}
+
+#inicio{
+    background-color: aliceblue;
+    border-radius: 20px;
+    box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, 0.3);
+    margin: 24px auto;
+    max-width: 900px;
+    padding: 32px 24px;
+    display: block
+}
+
+.intro-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+    gap: 28px;
+}
+
+@media (max-width: 800px) {
+    .intro-content {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    text-align: center;
+    }
+}
+
+.title1{
+    font-family: HelloHeadline;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: rgb(136, 202, 252);
+    font-size: 50px;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-shadow:
+    -1px -1px 0 rgba(0, 94, 177, 0.514),  
+    1px -1px 1px rgba(0, 94, 177, 0.514),  
+    -1px  1px 0 rgba(0, 94, 177, 0.514),  
+    1px  1px 1px rgba(0, 94, 177, 0.514);; 
+}
+
+ul, li{
+    text-align: justify;
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.p1{
+    text-align: justify;
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.img1{
+    max-width: 100%;
+    border-radius: 18px;
+    box-shadow: 0 2px 12px rgba(0,94,177,0.15);
+    display: block;
+    margin: 0 auto;
+}
+
+#historia{
+    background-color: aliceblue;
+    border-radius: 20px;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, 0.3);
+    display: grid;
+        grid-template-areas: 
+        "title title"
+        "bluey2 bluey1"
+        "bluey3 bluey3";
+        grid-template-columns: 2fr 1fr;
+    gap: 10px;
+    margin: 24px;
+    margin-bottom: 10px;
+}
+.title2{
+    font-family: HelloHeadline;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: rgb(136, 202, 252);
+    font-size: 35px;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-shadow:
+    -1px -1px 0 rgba(0, 94, 177, 0.514),  
+    1px -1px 1px rgba(0, 94, 177, 0.514),  
+    -1px  1px 0 rgba(0, 94, 177, 0.514),  
+    1px  1px 1px rgba(0, 94, 177, 0.514);
+    grid-area: title;
+}
+
+.subtitle{
+    color: rgb(44, 130, 206);
+    font-family: 'Comic Neue', sans-serif;
+    font-weight: 1000;
+    font-size: 30px;
+    text-align: center;
+    text-shadow:
+    -1px -1px 0 rgba(17, 83, 145, 0.89),  
+    1px -1px 1px rgba(17, 83, 145, 0.89),  
+    -1px  1px 0 rgba(17, 83, 145, 0.89),  
+    1px  1px 1px rgba(17, 83, 145, 0.89); 
+    
+}
+
+.subtitle2{
+    color: rgb(44, 130, 206);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+    text-decoration: underline rgb(44, 130, 206);
+    font-weight: 600;
+    font-size: 20px;
+}
+.bluey-comienzo{
+    border-radius: 20px;
+    box-shadow: 1px 1px 10px rgba(0, 94, 177, 0.514);
+    padding: 10px 15px;
+    grid-area: bluey1;
+}
+.quien-es-bluey{
+    border-radius: 20px;
+    box-shadow: 1px 1px 10px rgba(0, 94, 177, 0.514);
+    padding: 10px 15px;
+    grid-area: bluey2;
+}
+.contador-episodios {
+    grid-area: bluey3;
+    text-align: center;
+    background-color: aliceblue;
+    padding: 10px 15px;
+    border-radius: 15px;
+    box-shadow: 2px 2px 12px rgba(0, 94, 177, 0.514);
+}
+
+.episodios-numero {
+    margin-top: 15px;
+    font-size: 26px;
+    color: rgb(31, 120, 200);
+    font-weight: bold;
+    text-align: center;
+}
+
+.img2{
+    grid-area: img2;
+    align-items: center;
+    border-radius: 20px;
+    padding: 10px 15px;
+    box-shadow: 1px 1px 10px rgba(0, 94, 177, 0.514);
+}
+
+#personajes{
+    background-color: aliceblue;
+    border-radius: 20px;
+    width: auto;
+    height: auto;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-right: 10px;
+    margin-top: 10px;
+    margin: 24px;
+    margin-bottom: 10px;
+    box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, 0.3);
+    display: flow-root;
+}
+
+.title3{
+    font-family: HelloHeadline;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: rgb(136, 202, 252);
+    font-size: 35px;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-shadow:
+    -1px -1px 0 rgba(0, 94, 177, 0.514),  
+    1px -1px 1px rgba(0, 94, 177, 0.514),  
+    -1px  1px 0 rgba(0, 94, 177, 0.514),  
+    1px  1px 1px rgba(0, 94, 177, 0.514);; 
+}
+
+#clips{
+    background-color: aliceblue;
+    border-radius: 20px;
+    width: auto;
+    height: auto;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, 0.3);
+    display: flow-root;
+    margin: 24px;
+}
+
+.title4{
+    font-family: HelloHeadline;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: rgb(136, 202, 252);
+    font-size: 35px;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-shadow:
+    -1px -1px 0 rgba(0, 94, 177, 0.514),  
+    1px -1px 1px rgba(0, 94, 177, 0.514),  
+    -1px  1px 0 rgba(0, 94, 177, 0.514),  
+    1px  1px 1px rgba(0, 94, 177, 0.514);; 
+}
+
+.acordeon-personajes {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 28px;
+    flex-wrap: wrap;
+    margin-top: 32px;
+}
+
+.personaje {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 120px;
+    max-width: 160px;
+}
+
+.btn-img {
+    background: none;
+    border: none;
+    margin-bottom: 10px;
+    cursor: pointer;
+    outline: none;
+    transition: transform 0.15s;
+}
+
+.btn-img:active, .btn-img:focus {
+    transform: scale(1.07);
+}
+
+.foto-personaje {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    border-radius: 10px;
+    border: 3px solid #b3e5fc;
+    box-shadow: 0 1px 4px rgba(0,94,177,0.09);
+    background: #fff;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.btn-img:hover .foto-personaje {
+    border-color: #29b6f6;
+    box-shadow: 0 3px 16px rgba(0,94,177,0.14);
+}
+
+.descripcion-personaje {
+    margin-top: 10px;
+    background: #e0f7fa;
+    color: #1d5e87;
+    font-size: 1rem;
+    border-radius: 10px;
+    padding: 10px 12px;
+    width: 100%;
+    box-shadow: 0 2px 8px rgba(0,94,177,0.07);
+    display: none;
+    animation: fadeIn 0.25s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@media (max-width: 800px) {
+    .acordeon-personajes {
+    gap: 14px;
+    }
+}
+
+.foot {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+footer, footer > div {
+    width: 100%;
+    display: block;
+}
+
+.clips-galeria {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 18px;
+}
+
+.clip {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.clip-titulo {
+  margin-top: 8px;
+  font-size: 1rem;
+  color: #155fa0;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+}

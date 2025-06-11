@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Bienvenidos al mundo de Bluey!</title>
+    <link rel="stylesheet" href="/web_bluey/styles.css">
+    <link rel="shortcut icon" href="/img/dfz6hfv-6e9ccd01-43e5-4e25-af5c-7db1bde588b4.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap" rel="stylesheet">
+
+</head>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+    let count = 0;
+    const max = 151; // Cantidad de episodios
+    const speed = 10; // Velocidad (más bajo = más rápido)
+    const display = document.getElementById("episodios");
+
+    const contador = setInterval(() => {
+    count++;
+    display.textContent = count;
+    if (count === max) {
+        clearInterval(contador);
+    }
+    }, speed);
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const buttons = document.querySelectorAll(".btn-img");
+    const descriptions = document.querySelectorAll(".descripcion-personaje");
+
+  // Oculta todas las descripciones al inicio
+    descriptions.forEach(desc => desc.style.display = "none");
+
+    buttons.forEach(btn => {
+    btn.addEventListener("click", function () {
+      // Oculta todas las descripciones
+        descriptions.forEach(desc => desc.style.display = "none");
+      // Muestra la correspondiente
+        const targetId = btn.getAttribute("data-target");
+        const targetDesc = document.getElementById(targetId);
+        if (targetDesc) targetDesc.style.display = "block";
+    });
+    });
+});
+</script>
+<body>
+    <div class="head">
+        <header>
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="#"><img src="/img/TV_logo_for_Bluey.png" alt="Logo de mi página" width="100px"></a>
+                </div>
+
+                <form action="/buscar" method="GET">
+                    <input type="text" name="q" placeholder="Buscar..." />
+                    <button type="submit">🔍</button>
+                </form>
+            </nav>
+        </header>
+    </div>
+    <div class="seccion1"> 
+        <section id="inicio" class="inicio-highlight">
+            <h2 class="title1">¡Bienvenidos al Mundo de Bluey!</h2>
+        <div class="intro-content">
+            <p class="p1">
+                <span>Descubre todo sobre Bluey, su familia y sus amigos en esta pagina hecha por y para los fans de la serie para niños más famosa de la década. En esta pagina podras encontrar un poco de la historia de la creación de la serie, la descripción de los personajes, clips y mucho más! Ven a descubrilo. :D</span>
+            </p>
+            <div style="text-align: center;">
+                <img  class="img1" src="https://static.wikia.nocookie.net/8b6bad69-cbf4-47f7-ac8c-ae3535f471f5/scale-to-width/755" alt="">
+            </div>
+        </div>
+        </section>
+    </div>
+
+    <div class="seccion2"> 
+        <section id="historia">
+            <h2 class="title2">Historia</h2>
+                <div class="bluey-comienzo">
+                    <h4 class="subtitle">¿Como comenzó Bluey?</h4>
+                        <p class="p1">Bluey es una producción australiana creada por Joe Brumm, quien se inspiró en su propia experiencia como padre. Brumm, un animador con experiencia previa en otras series infantiles, quería crear un programa que mostrara la dinámica de juego entre padres e hijos de una manera auténtica y divertida.</p>
+                        <p class="p1">La serie fue producida por el estudio australiano Ludo Studio y se estrenó en 2018 en el canal ABC Kids. Gracias a su éxito, rápidamente se expandió a nivel internacional, llegando a plataformas como Disney+ y obteniendo premios como el Premio Internacional Emmy a la mejor serie preescolar</p>
+                        <img  class="img2" src="/img/990030138_familia_bluey_Bandit_Bingo_Chilli_Bluey_fondo_turquesamil.jpg" alt="blueys-family">
+            </div>
+            <div class="quien-es-bluey">
+            <h4 class="subtitle">¿Quién es Bluey?</h4>
+            <p class="p1">Bluey Christine Heeler es una cachorra de la raza Blue Heeler (pastor ganadero australiano) de seis años de edad. Su personalidad es enérgica, curiosa y llena de imaginación, lo que la lleva a vivir diversas aventuras en su día a día. Bluey es la hija mayor de Bandit y Chilli, y la hermana de Bingo.</p>
+            
+
+            <p class="subtitle2">Bluey ha logrado enamorar tanto a los niños como a los adultos por varias razones:</p>
+            <p>    
+            <ul>
+                <li>
+                Representación realista de la vida familiar: A diferencia de muchas series infantiles, Bluey muestra interacciones genuinas entre padres e hijos, reflejando los desafíos y alegrías de la crianza.</li>
+                <li>Humor inteligente: La serie incorpora elementos de humor que pueden ser disfrutados por todas las edades, con referencias y situaciones que los padres también encuentran entretenidas.</li>
+                <li>Animación atractiva y sencilla: Su estilo visual de colores suaves y diseño amigable la hacen atractiva sin resultar abrumadora.</li>
+                <li>Episodios cortos y dinámicos: Con capítulos de solo siete minutos, Bluey logra mantener la atención de los niños sin perder profundidad en sus historias.</li>
+            </ul>
+            </div>
+            <div class="contador-episodios">
+                <h4 class="subtitle">Cantidad de episodios emitidos</h4>
+                <p class="episodios-numero"><span id="episodios">0</span> episodios hasta ahora 🎉</p>
+            
+            </div>
+                
+        </section>
+    </div>
+    
+    <div class="seccion3"> 
+        <section id="personajes">
+            <h2 class="title3">Personajes</h2>
+            <div class="acordeon-personajes">
+                <div class="personaje">
+                <button class="btn-img" data-target="desc-bluey">
+                    <img src="/img/descarga.png" alt="Bluey" class="foto-personaje">
+                </button>
+                <div class="descripcion-personaje" id="desc-bluey">
+                    <strong>Bluey:</strong> Bluey es una perrita Blue Heeler de seis años, energética, curiosa y creativa.
+                </div>
+                </div>
+                <div class="personaje">
+                    <button class="btn-img" data-target="desc-bingo">
+                        <img src="/img/descarga (1).png" alt="Bingo" class="foto-personaje">
+                    </button>
+                    <div class="descripcion-personaje" id="desc-bingo">
+                        <strong>Bingo:</strong> Bingo es la hermana menor de Bluey, dulce y sensible, siempre dispuesta a jugar.
+                    </div>
+                </div>
+                <div class="personaje">
+                    <button class="btn-img" data-target="desc-chilli">
+                        <img src="/img/descarga (2).png" alt="Chilli" class="foto-personaje">
+                    </button>
+                    <div class="descripcion-personaje" id="desc-chilli">
+                        <strong>Chilli:</strong> Chilli es la mamá de Bluey y Bingo, cariñosa y comprensiva, y un gran apoyo para la familia.
+                    </div>
+                </div>
+                <div class="personaje">
+                    <button class="btn-img" data-target="desc-bandit">
+                        <img src="/img/descarga (3).png" alt="Bandit" class="foto-personaje">
+                    </button>
+                    <div class="descripcion-personaje" id="desc-bandit">
+                        <strong>Bandit:</strong> Bandit el papá de Bluey y Bingo, divertido y siempre involucrado en los juegos.
+                    </div>
+                </div>
+                <div class="personaje">
+                    <button class="btn-img" data-target="desc-muffin">
+                        <img src="/img/descarga (4).png" alt="Muffin" class="foto-personaje">
+                    </button>
+                    <div class="descripcion-personaje" id="desc-muffin">
+                        <strong>Muffin:</strong> La prima de Bluey y Bingo, gritona y siempre lista para jugar.
+                    </div>
+                </div>
+                <div class="personaje">
+                    <button class="btn-img" data-target="desc-socks">
+                        <img src="/img/descarga (5).png" alt="Socks" class="foto-personaje">
+                    </button>
+                    <div class="descripcion-personaje" id="desc-socks">
+                        <strong>Socks:</strong> Otra de las primas de Bluey y Bingo, habla poco pero definitivamente es muy tierna.
+                    </div>
+                </div>
+                <div class="personaje">
+                    <button class="btn-img" data-target="desc-stripe">
+                        <img src="/img/descarga (6).png" alt="Stripe" class="foto-personaje">
+                    </button>
+                    <div class="descripcion-personaje" id="desc-stripe">
+                        <strong>Tío Stripe:</strong> Es el hermano de Bandit y es el tío de las protagonistas, y tambien padre de Muffin y Socks.
+                    </div>
+                </div>
+                <div class="personaje">
+                    <button class="btn-img" data-target="desc-trixie">
+                        <img src="/img/descarga (7).png" alt="Trixie" class="foto-personaje">
+                    </button>
+                    <div class="descripcion-personaje" id="desc-trixie">
+                        <strong>Tía Trixie:</strong> Mamá de Muffin y Socks, esposa de Stripe y tía de las pequeñas.
+                    </div>
+                </div>
+                <div class="personaje">
+                    <button class="btn-img" data-target="desc-chloe">
+                        <img src="/img/descargar.png" alt="Chloe" class="foto-personaje">
+                    </button>
+                    <div class="descripcion-personaje" id="desc-chloe">
+                        <strong>Chloe:</strong> Mejor Amiga de Bluey, una dalmata muy curiosa pero a la vez timida.
+                    </div>
+                </div>
+                <div class="personaje">
+                    <button class="btn-img" data-target="desc-coco">
+                        <img src="/img/descargar (1).png" alt="Coco" class="foto-personaje">
+                    </button>
+                    <div class="descripcion-personaje" id="desc-coco">
+                        <strong>Coco:</strong> Coco es una caniche de pelo rosa, mandona y muy divertida.
+                    </div>
+                </div>
+                <div class="personaje">
+                    <button class="btn-img" data-target="desc-pompom">
+                        <img src="/img/descargar (2).png" alt="Pom Pom" class="foto-personaje">
+                    </button>
+                    <div class="descripcion-personaje" id="desc-pompom">
+                        <strong>Pom Pom:</strong> Es la mejor amiga de Bingo, una pomeranian muy pequeñita y tierna.
+                </div>
+            </div>
+            <div class="personaje">
+                    <button class="btn-img" data-target="desc-mackenzie">
+                        <img src="/img/descargar (3).png" alt="Mackenzie" class="foto-personaje">
+                    </button>
+                    <div class="descripcion-personaje" id="desc-mackenzie">
+                        <strong>Mackenzie:</strong> Amigo de Bluey, es un Border Collie muy inteligente.
+                </div>
+        </section>
+    </div>
+
+    <div class="seccion4">
+        <section id="clips">
+            <h2 class="title4">Clips</h2>
+            <p class="subtitle"> ¡Aquí puedes ver los clips destacados de la serie!</p>
+            <div class="clips-galeria">
+                <div class="clip">
+                    <iframe width="250" height="140" src="https://www.youtube.com/watch?v=y8OPd7xezis"
+                        title="Bluey - El Cartel (Clip)" allowfullscreen></iframe>
+                    <p class="clip-titulo">La Boda</p>
+                </div>
+                <div class="clip">
+                    <iframe width="250" height="140" src="hhttps://www.youtube.com/watch?v=Dztj8Rs1Gyc&pp=ygUFYmx1ZXk%3D"
+                        title="Bluey - Si-No Botón (Clip)" allowfullscreen></iframe>
+                    <p class="clip-titulo">Si-No Botón</p>
+                </div>
+                <div class="clip">
+                    <iframe width="250" height="140"
+                        src="https://www.youtube.com/watch?v=5DEBViLEoXc&pp=ygUQYmluZ28gc2xlZXB5dGltZQ%3D%3D"
+                        title="Bluey - Sleepytime (Clip)" allowfullscreen></iframe>
+                    <p class="clip-titulo">Hora de Dormir</p>
+                    
+    
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <div>
+            <p class="foot"> Todos los derechos reserados © Pagina hecha por Gabriela Pérez, con ayuda de Copilot y Chat GPT.</p>
+            <p class="foot">
+                2025
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
